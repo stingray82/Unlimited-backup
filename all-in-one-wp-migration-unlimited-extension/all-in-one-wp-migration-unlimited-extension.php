@@ -5,7 +5,7 @@
  * Tested up to:      6.8.3
  * Requires at least: 6.5
  * Requires PHP:      8.0
- * Version:           2.79.1
+ * Version:           2.80
  * Author:            stingray82
  * Author URI:        https://github.com/stingray82/
  * License:           GPL3
@@ -74,41 +74,28 @@ function ai1wmue_mock_license_response( $pre, $args, $url ) {
 	}
 	return false;
 }
-add_filter( 'pre_http_request', 'ai1wmue_mock_license_response', 10, 3 );
-
-// Disable license checks
-function ai1wmue_disable_license_checks() {
-	return true;
-}
-add_filter( 'ai1wm_license_validation', 'ai1wmue_disable_license_checks', 10, 0 );
-
-if ( is_multisite() ) {
-	// Multisite Extension shall be used instead
-	return;
-}
-
 // Check SSL Mode
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && ( $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' ) ) {
 	$_SERVER['HTTPS'] = 'on';
 }
 
 // Plugin Basename
-define( 'AI1WMUE_PLUGIN_BASENAME', basename( dirname( __FILE__ ) ) . '/' . basename( __FILE__ ) );
+define( 'AI1WMUE_PLUGIN_BASENAME', basename( __DIR__ ) . '/' . basename( __FILE__ ) );
 
 // Plugin Path
-define( 'AI1WMUE_PATH', dirname( __FILE__ ) );
+define( 'AI1WMUE_PATH', __DIR__ );
 
 // Plugin URL
 define( 'AI1WMUE_URL', plugins_url( '', AI1WMUE_PLUGIN_BASENAME ) );
 
 // Include constants
-require_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'constants.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'constants.php';
 
 // Include functions
-require_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'functions.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
 
 // Include loader
-require_once dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'loader.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'loader.php';
 
 // Register activation hook to install and activate base plugin if needed
 register_activation_hook( __FILE__, 'ai1wmue_activate_plugin' );
@@ -163,10 +150,11 @@ function ai1wmue_activate_plugin() {
 $main_controller = new Ai1wmue_Main_Controller( 'AI1WMUE', 'file' );
 
 
+
 // ===========================================================================
 // = Let's Fork this thing! =
 // ===========================================================================
-define('RUP_UNLIMITED_BACKUP_AI1WMUE_VERSION', '2.79.1');
+define('RUP_UNLIMITED_BACKUP_AI1WMUE_VERSION', '2.80');
 define( 'RUP_UNLIMITED_BACKUP_MAIN_FILE', __FILE__ );
 require_once __DIR__ . '/inc/fork.php';
 

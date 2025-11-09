@@ -70,5 +70,4 @@ class Ai1wmue_Settings {
 	public function reset_backups_path() {
 		return delete_option( AI1WM_BACKUPS_PATH_OPTION );
 	}
-
 }

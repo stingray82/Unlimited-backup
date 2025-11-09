@@ -97,12 +97,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="ai1wm-sidebar">
 				<div class="ai1wm-segment">
 					<?php if ( ! AI1WM_DEBUG ) : ?>
-						<?php include AI1WM_TEMPLATES_PATH . '/common/share-buttons.php'; ?>
+						<?php require AI1WM_TEMPLATES_PATH . '/common/share-buttons.php'; ?>
 					<?php endif; ?>
 
 					<h2><?php _e( 'Leave Feedback', AI1WMUE_PLUGIN_NAME ); ?></h2>
 
-					<?php include AI1WM_TEMPLATES_PATH . '/common/leave-feedback.php'; ?>
+					<?php require AI1WM_TEMPLATES_PATH . '/common/leave-feedback.php'; ?>
 				</div>
 			</div>
 		</div>

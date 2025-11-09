@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
@@ -70,7 +72,7 @@ if ( ! class_exists( 'Ai1wmve_Main_Controller' ) ) {
 		 *
 		 * @throws Ai1wmve_Error_Exception
 		 */
-		public final function __construct( $plugin_prefix, $plugin_params_key ) {
+		final public function __construct( $plugin_prefix, $plugin_params_key ) {
 			$this->plugin_prefix     = $plugin_prefix;
 			$this->plugin_params_key = $plugin_params_key;
 

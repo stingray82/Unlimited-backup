@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
@@ -164,7 +166,7 @@ class Ai1wmve_Reset_Themes {
 		if ( ! is_wp_error( $api ) ) {
 
 			if ( ! class_exists( 'Theme_Upgrader' ) ) {
-				require_once( ABSPATH . 'wp-admin/includes/class-wp-upgrader.php' );
+				require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 			}
 
 			$upgrader = new Theme_Upgrader();

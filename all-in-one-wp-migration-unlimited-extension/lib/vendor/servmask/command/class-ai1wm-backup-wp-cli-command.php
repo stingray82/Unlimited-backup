@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
@@ -134,7 +136,7 @@ if ( class_exists( 'Ai1wm_Backup_WP_CLI_Base' ) && ! class_exists( 'Ai1wm_Backup
 		 * @subcommand list-backups
 		 */
 		public function list_backups( array $args, array $assoc_args ) {
-			$backups = new cli\Table;
+			$backups = new cli\Table();
 
 			$backups->setHeaders(
 				array(
@@ -144,7 +146,7 @@ if ( class_exists( 'Ai1wm_Backup_WP_CLI_Base' ) && ! class_exists( 'Ai1wm_Backup
 				)
 			);
 
-			$model = new Ai1wm_Backups;
+			$model = new Ai1wm_Backups();
 			foreach ( $model->get_files() as $backup ) {
 				$backups->addRow(
 					array(
@@ -219,7 +221,7 @@ if ( class_exists( 'Ai1wm_Backup_WP_CLI_Base' ) && ! class_exists( 'Ai1wm_Backup
 				// Disable completed timeout
 				add_filter( 'ai1wm_completed_timeout', '__return_zero' );
 
-				$table = new cli\Table;
+				$table = new cli\Table();
 
 				$table->setHeaders(
 					array(

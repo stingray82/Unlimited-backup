@@ -3,7 +3,7 @@ Contributors: Stingray82
 Tags: All-in-one-migration, backup, unlimited
 Requires at least: 6.5
 Tested up to: 6.8.3
-Stable tag: 2.79.1
+Stable tag: 2.80
 Requires PHP: 8.0
 License: GPL-3.0-or-later
 License URI:https://www.gnu.org/licenses/gpl-3.0.html

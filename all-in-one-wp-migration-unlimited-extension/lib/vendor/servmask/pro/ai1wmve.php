@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
@@ -32,7 +34,7 @@ if ( defined( 'AI1WMVE_PATH' ) ) {
 	// as it might happen some extension to have
 	// older version of the pro package loaded
 	if ( ! class_exists( 'Ai1wmve_Export_Retention_Base' ) ) {
-		require_once dirname( __FILE__ ) .
+		require_once __DIR__ .
 			DIRECTORY_SEPARATOR .
 			'model' .
 			DIRECTORY_SEPARATOR .
@@ -40,7 +42,7 @@ if ( defined( 'AI1WMVE_PATH' ) ) {
 			DIRECTORY_SEPARATOR .
 			'class-ai1wmve-export-retention-base.php';
 
-		require_once dirname( __FILE__ ) .
+		require_once __DIR__ .
 			DIRECTORY_SEPARATOR .
 			'model' .
 			DIRECTORY_SEPARATOR .
@@ -53,13 +55,13 @@ if ( defined( 'AI1WMVE_PATH' ) ) {
 	// as it might happen some extension to have
 	// older version of the pro package loaded
 	if ( ! class_exists( 'Ai1wmve_Array_Sorter' ) ) {
-		require_once dirname( __FILE__ ) .
+		require_once __DIR__ .
 			DIRECTORY_SEPARATOR .
 			'utils' .
 			DIRECTORY_SEPARATOR .
 			'class-ai1wmve-array-sorter.php';
 
-		require_once dirname( __FILE__ ) .
+		require_once __DIR__ .
 			DIRECTORY_SEPARATOR .
 			'utils' .
 			DIRECTORY_SEPARATOR .
@@ -70,17 +72,17 @@ if ( defined( 'AI1WMVE_PATH' ) ) {
 }
 
 // Include constants
-require_once dirname( __FILE__ ) .
+require_once __DIR__ .
 	DIRECTORY_SEPARATOR .
 	'constants.php';
 
 // Include exceptions
-require_once dirname( __FILE__ ) .
+require_once __DIR__ .
 	DIRECTORY_SEPARATOR .
 	'exceptions.php';
 
 // Include functions
-require_once dirname( __FILE__ ) .
+require_once __DIR__ .
 	DIRECTORY_SEPARATOR .
 	'functions.php';
 

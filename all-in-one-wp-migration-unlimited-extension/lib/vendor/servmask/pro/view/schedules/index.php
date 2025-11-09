@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
@@ -49,21 +51,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</h1>
 
 				<div id="ai1wmve-schedules-list">
-					<?php include AI1WMVE_TEMPLATES_PATH . '/schedules/schedules-list.php'; ?>
+					<?php require AI1WMVE_TEMPLATES_PATH . '/schedules/schedules-list.php'; ?>
 				</div>
 
-				<div id="ai1wmve-schedules-event-log">
-					<event-log></event-log>
-				</div>
+				<div id="ai1wmve-schedules-event-vue-actions"></div>
 
-				<div id="ai1wmve-schedules-event-clean">
-					<event-log-clean></event-log-clean>
-				</div>
 			</div>
 
 		</div>
 
-		<?php include AI1WM_TEMPLATES_PATH . '/common/sidebar-right.php'; ?>
+		<?php require AI1WM_TEMPLATES_PATH . '/common/sidebar-right.php'; ?>
 
 	</div>
 </div>

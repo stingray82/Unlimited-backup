@@ -33,7 +33,7 @@ class Ai1wmue_Import_Database {
 
 	public static function execute( $params ) {
 
-		$model = new Ai1wmue_Settings;
+		$model = new Ai1wmue_Settings();
 
 		// Set progress
 		Ai1wm_Status::info( __( 'Updating settings...', AI1WMUE_PLUGIN_NAME ) );

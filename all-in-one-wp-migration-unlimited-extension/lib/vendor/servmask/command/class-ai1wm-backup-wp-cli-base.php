@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
@@ -159,7 +161,7 @@ if ( defined( 'WP_CLI' ) && ! class_exists( 'Ai1wm_Backup_WP_CLI_Base' ) ) {
 					$all_tables = $mysql->get_tables();
 
 					if ( $assoc_args['exclude-tables'] === true || empty( $assoc_args['exclude-tables'] ) ) {
-						$tables = new cli\Table;
+						$tables = new cli\Table();
 
 						$tables->setHeaders(
 							array(
@@ -216,7 +218,7 @@ if ( defined( 'WP_CLI' ) && ! class_exists( 'Ai1wm_Backup_WP_CLI_Base' ) ) {
 					}
 
 					if ( $assoc_args['include-tables'] === true || empty( $assoc_args['include-tables'] ) ) {
-						$tables = new cli\Table;
+						$tables = new cli\Table();
 
 						$tables->setHeaders(
 							array(

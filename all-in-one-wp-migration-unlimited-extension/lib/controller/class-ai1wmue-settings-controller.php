@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Ai1wmue_Settings_Controller {
 
 	public static function index() {
-		$model = new Ai1wmue_Settings;
+		$model = new Ai1wmue_Settings();
 
 		Ai1wm_Template::render(
 			'settings/index',
@@ -56,7 +56,7 @@ class Ai1wmue_Settings_Controller {
 
 		// Settings update
 		if ( isset( $params['ai1wmue_update'] ) ) {
-			$model = new Ai1wmue_Settings;
+			$model = new Ai1wmue_Settings();
 
 			// Set number of backups
 			if ( ! empty( $params['ai1wmue_backups'] ) ) {

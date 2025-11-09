@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014-2023 ServMask Inc.
+ * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +14,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Attribution: This code is part of the All-in-One WP Migration plugin, developed by
  *
  * ███████╗███████╗██████╗ ██╗   ██╗███╗   ███╗ █████╗ ███████╗██╗  ██╗
  * ██╔════╝██╔════╝██╔══██╗██║   ██║████╗ ████║██╔══██╗██╔════╝██║ ██╔╝
@@ -161,7 +163,7 @@ class Ai1wmve_Reset_Database {
 	protected function reinstall_db() {
 		if ( ! function_exists( 'wp_install' ) ) {
 			// We need functions from here
-			require_once( ABSPATH . '/wp-admin/includes/upgrade.php' );
+			require_once ABSPATH . '/wp-admin/includes/upgrade.php';
 		}
 
 		// Force creating all WP tables
