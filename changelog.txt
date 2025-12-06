@@ -1,3 +1,11 @@
+= EDIT Version and Date =
+- Updated UUPD Updater Version to latest 1.3.2
+- Update to Native version 
+
+
+= 2.80 09 November 2025 =
+Update to Native 2.80
+
 = 2.79.1 07 October 2025 =
 - Added new trademark disclaimers in the plugin list and "View Details" modal to ensure users are clearly informed this is an independent fork not affiliated with ServMask, Inc.
 - Introduced `RUP_UB_DISABLE_DISCLAIMER` constant and `rup_ub_disclaimer_enabled` filter, allowing advanced users to optionally disable disclaimer messages if desired.

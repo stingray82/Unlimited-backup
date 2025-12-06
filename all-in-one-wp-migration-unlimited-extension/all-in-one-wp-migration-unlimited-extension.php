@@ -5,7 +5,7 @@
  * Tested up to:      6.8.3
  * Requires at least: 6.5
  * Requires PHP:      8.0
- * Version:           2.80
+ * Version:           2.81
  * Author:            stingray82
  * Author URI:        https://github.com/stingray82/
  * License:           GPL3

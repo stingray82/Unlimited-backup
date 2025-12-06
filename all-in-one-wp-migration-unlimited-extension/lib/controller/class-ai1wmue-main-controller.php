@@ -209,6 +209,16 @@ class Ai1wmue_Main_Controller extends Ai1wmve_Main_Controller {
 			)
 		);
 
+		// Site details
+		wp_localize_script(
+			'ai1wmue_import',
+			'ai1wmue_site_details',
+			array(
+				'site_url'    => site_url(),
+				'admin_email' => get_option( 'admin_email' ),
+			)
+		);
+
 		// File uploader
 		wp_localize_script(
 			'ai1wmue_import',
@@ -265,6 +275,16 @@ class Ai1wmue_Main_Controller extends Ai1wmve_Main_Controller {
 			)
 		);
 
+		// Site details
+		wp_localize_script(
+			'ai1wmue_backups',
+			'ai1wmue_site_details',
+			array(
+				'site_url'    => site_url(),
+				'admin_email' => get_option( 'admin_email' ),
+			)
+		);
+
 		add_action( 'admin_print_scripts', array( $this, 'google_tag_manager' ) );
 	}
 
@@ -318,6 +338,16 @@ class Ai1wmue_Main_Controller extends Ai1wmve_Main_Controller {
 			array(
 				'url' => AI1WMUE_SERVICE_URL,
 				'key' => AI1WMUE_PURCHASE_ID,
+			)
+		);
+
+		// Site details
+		wp_localize_script(
+			'ai1wmue_reset',
+			'ai1wmue_site_details',
+			array(
+				'site_url'    => site_url(),
+				'admin_email' => get_option( 'admin_email' ),
 			)
 		);
 
