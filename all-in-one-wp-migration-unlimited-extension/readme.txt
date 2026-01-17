@@ -3,10 +3,10 @@ Contributors: Stingray82
 Tags: All-in-one-migration, backup, unlimited
 Requires at least: 6.5
 Tested up to: 6.9
-Stable tag: 2.81
+Stable tag: 2.81.1
 Requires PHP: 8.0
 License: GPL-3.0-or-later
-License URI:https://www.gnu.org/licenses/gpl-3.0.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 An addon to allow unlimited file size for all-in-one-migration plugin
 == Description ==
@@ -29,8 +29,8 @@ Yes please do, create a pull request and after testing we can then merge it
 It is a fork of the original unlimited backup The ALL-IN-ONE WP MIGRATION® trademarks are the intellectual property of the ServMask, Inc . Uses of the  ALL-IN-ONE WP MIGRATION®, names in this Repo and Plugin are for identification and compatibility purposes only and do not imply an endorsement by ServMask, Inc** 
 
 This version is not endorsed or owned by, or affiliated with ServMask, Inc you should purchase from Servmask if you want official
-
-== Changelog ==
+ 
+== Changelog == 
 = 2.8.1 06 December 2025 =
 - Updated UUPD Updater Version to latest 1.3.2
 - Update to Native version 

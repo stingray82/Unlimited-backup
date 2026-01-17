@@ -2,8 +2,8 @@
 Contributors: Stingray82
 Tags: All-in-one-migration, backup, unlimited
 Requires at least: 6.5
-Tested up to: 6.8.3
-Stable tag: 2.80
+Tested up to: 6.9
+Stable tag: 2.81
 Requires PHP: 8.0
 License: GPL-3.0-or-later
 License URI:https://www.gnu.org/licenses/gpl-3.0.html
@@ -31,6 +31,14 @@ It is a fork of the original unlimited backup The ALL-IN-ONE WP MIGRATION® trad
 This version is not endorsed or owned by, or affiliated with ServMask, Inc you should purchase from Servmask if you want official
 
 == Changelog ==
+= 2.8.1 06 December 2025 =
+- Updated UUPD Updater Version to latest 1.3.2
+- Update to Native version 
+
+
+= 2.80 09 November 2025 =
+- Update to Native 2.80
+
 = 2.79.1 07 October 2025 =
 - Added new trademark disclaimers in the plugin list and "View Details" modal to ensure users are clearly informed this is an independent fork not affiliated with ServMask, Inc.
 - Introduced `RUP_UB_DISABLE_DISCLAIMER` constant and `rup_ub_disclaimer_enabled` filter, allowing advanced users to optionally disable disclaimer messages if desired.
