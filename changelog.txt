@@ -1,3 +1,7 @@
+= 2.82.1 23 March 2026 =
+- Update: Updater to 2.0-Alpha
+ - Update: Compatibility
+
 = 2.82 04 February 2026 =
 - Updated UUPD Updater Version to latest 1.4.0
 - Update to Native version 

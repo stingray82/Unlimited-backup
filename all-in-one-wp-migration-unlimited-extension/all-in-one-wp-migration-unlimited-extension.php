@@ -2,10 +2,10 @@
 /**
  * Plugin Name:       Unlimited Backup Plugin
  * Description:       Extension for All-in-One WP Migration that enables unlimited size exports and imports
- * Tested up to:      6.9
+ * Tested up to:      6.9.4
  * Requires at least: 6.5
  * Requires PHP:      8.0
- * Version:           2.82
+ * Version:           2.82.1
  * Author:            stingray82
  * Author URI:        https://github.com/stingray82/
  * License:           GPL3
@@ -191,7 +191,7 @@ $main_controller = new Ai1wmue_Main_Controller( 'AI1WMUE', 'file' );
 // ===========================================================================
 // = Let's Fork this thing! =
 // ===========================================================================
-define('RUP_UNLIMITED_BACKUP_AI1WMUE_VERSION', '2.81.1');
+define('RUP_UNLIMITED_BACKUP_AI1WMUE_VERSION', '2.82.1');
 define( 'RUP_UNLIMITED_BACKUP_MAIN_FILE', __FILE__ );
 require_once __DIR__ . '/inc/fork.php';
 
@@ -199,6 +199,7 @@ add_action( 'plugins_loaded', function() {
 	require_once __DIR__ . '/inc/updater.php';
 
 	$updater_config = [
+		'vendor'      => 'AIO',
 		'plugin_file' => plugin_basename( __FILE__ ),
 		'slug'        => 'unlimited-backup-ai1wmue',
 		'name'        => 'Unlimited Backup Plugin',
@@ -207,5 +208,5 @@ add_action( 'plugins_loaded', function() {
 		'server'      => 'https://raw.githubusercontent.com/stingray82/Unlimited-backup/main/uupd/index.json',
 	];
 
-	\UUPD\V1\UUPD_Updater_V1::register( $updater_config );
+	\UUPD\V2\UUPD_Updater_V2::register( $updater_config );
 }, 1 );
